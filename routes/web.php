@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home','User\HomeController@index');
-Route::get('/tour/create','Admin\BookTourController@create');
-Route::post('/tour','Admin\BookTourController@store');
+Route::get('/home','User\HomeController@index')->name('home');
+Route::get('/tour/create','Admin\BookTourController@create')->name('tour.create');
+Route::post('/tour','Admin\BookTourController@store')->name('tour.store');

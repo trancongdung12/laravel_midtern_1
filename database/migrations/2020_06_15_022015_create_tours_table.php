@@ -19,7 +19,7 @@ class CreateToursTable extends Migration
             $table->string('image');
             $table->string('typetour');
             $table->string('shedule');
-            $table->string('depart');
+            $table->date('depart');
             $table->string('number');
             $table->string('price');
             $table->timestamps();

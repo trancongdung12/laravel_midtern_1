@@ -33,12 +33,14 @@
     line-height: 35px;
     background: gray;
     color: white;
+    width: 250px;
 }
 
 .title {
     font-weight: bold;
     width: 100%;
     padding: 0px 10px;
+    height: 150px;
     background: #ddd;
 }
 

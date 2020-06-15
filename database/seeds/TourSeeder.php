@@ -18,9 +18,9 @@ class TourSeeder extends Seeder
                 'name'=>$faker->text,
                 'image'=>'public/tour.jpg',
                 'typetour'=>$faker->city,
-                'shedule'=>$faker->numberBetween(1,5).'đến'.$faker->numberBetween(6,10).'ngày',
-                'depart'=>$faker->dateTimeBetween('now', '+21 days'),
-                'number'=>$faker->numberBetween(5,20),
+                'shedule'=>$faker->numberBetween(1,5).' đến '.$faker->numberBetween(6,10).' ngày',
+                'depart'=>$faker->date($format = 'd-m-Y', $min ='now'),
+                'number'=>$faker->numberBetween(1,20),
                 'price'=>$faker->numberBetween(10000000,20000000)
             ]
             );
