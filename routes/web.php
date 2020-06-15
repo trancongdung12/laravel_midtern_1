@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('tour/create','Admin\BookTourController@create');
+
+Route::get('/tour/create','Admin\BookTourController@create');
+Route::post('/tour','Admin\BookTourController@store');
