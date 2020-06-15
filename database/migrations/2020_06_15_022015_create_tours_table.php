@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTourTable extends Migration
+class CreateToursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTourTable extends Migration
      */
     public function up()
     {
-        Schema::create('tour', function (Blueprint $table) {
+        Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('image');
@@ -33,6 +33,6 @@ class CreateTourTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tour');
+        Schema::dropIfExists('tours');
     }
 }

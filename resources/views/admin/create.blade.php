@@ -15,7 +15,7 @@
 <body>
     <h1>Add tours</h1>
     <div class="container">
-        <form action="/tour" method="post">
+        <form action="/tour" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 @error('name')

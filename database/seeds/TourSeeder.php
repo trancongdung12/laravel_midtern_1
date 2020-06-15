@@ -13,7 +13,7 @@ class TourSeeder extends Seeder
     public function run(Faker $faker)
     {
         for($i=0;$i<10;$i++){
-            DB::table('tour')->insert(
+            DB::table('tours')->insert(
             [
                 'name'=>$faker->text,
                 'image'=>$faker->image('public/',640,480, null, false),
