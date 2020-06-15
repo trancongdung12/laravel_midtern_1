@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    width: 350px;
+}
+
+.top-title {
+    margin-left: -10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -25px;
+    font-weight: bold;
+}
+
+.top-title .day {
+    padding: 0px 10px;
+    line-height: 35px;
+    height: 35px;
+    width: 150px;
+    background: #ff05a7;
+    color: white;
+}
+
+.top-title .from {
+    padding: 0px 10px;
+    line-height: 35px;
+    background: gray;
+    color: white;
+}
+
+.title {
+    font-weight: bold;
+    width: 100%;
+    padding: 0px 10px;
+    background: #ddd;
+}
+
+.bottom-title {
+    padding: 0px 15px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 20px;
+    color: brown;
+    margin-left: 100px;
+}

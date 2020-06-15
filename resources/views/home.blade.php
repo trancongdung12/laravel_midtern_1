@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Home</title>
 </head>
 <body>
@@ -45,22 +46,26 @@
         </div>
       </nav>
       <div class="container">
-            <div class="item">
-                <img src="" alt="">
-                <div>
-                    <div>Còn 19 ngày</div>
-                    <div>Từ Hồ Chí Minh</div>
+          @foreach ($tour as $item)
+          <div class="item">
+          <img src="storage/{{$item->image}}" alt="" height="300px" width="350px">
+                <div class="top-title">
+                    <div class="day">{{$item->depart}}</div>
+                    <div class="from">{{$item->typetour}}</div>
                 </div>
-                <div>
-                    Tour Miền Trung
+                <div class="title">
+                    {{$item->name}}
                 </div>
-                <div>
-                    <p>Lịch trình: 4 ngày 3 đêm</p>
-                    <p>Khởi hành: 02/20/2020</p>
-                    <p>Số chỗ còn nhận: 9</p>
-                    <p>4000000 đ</p>
+                <div class="bottom-title">
+
+                    Lịch trình: {{$item->shedule}}<br>
+                    Khởi hành: {{$item->depart}}<br>
+                    Số chỗ còn nhận: {{$item->number}}<br>
+                    <p class="price">{{number_format($item->price)}} đ</p>
                 </div>
             </div>
+          @endforeach
+
       </div>
 </body>
 </html>

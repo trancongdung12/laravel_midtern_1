@@ -16,10 +16,10 @@ class TourSeeder extends Seeder
             DB::table('tours')->insert(
             [
                 'name'=>$faker->text,
-                'image'=>$faker->image('public/',640,480, null, false),
+                'image'=>'public/tour.jpg',
                 'typetour'=>$faker->city,
                 'shedule'=>$faker->numberBetween(1,5).'đến'.$faker->numberBetween(6,10).'ngày',
-                'depart'=>$faker->dateTime($max = 'now'),
+                'depart'=>$faker->dateTimeBetween('now', '+21 days'),
                 'number'=>$faker->numberBetween(5,20),
                 'price'=>$faker->numberBetween(10000000,20000000)
             ]
