@@ -5,21 +5,22 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Tour;
+use App\Http\Requests\ValidationRequest;
 class BookTourController extends Controller
 {
     function create(){
         return view('admin.create');
     }
-    function store(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'image'=>'required',
-            'schedule'=>'required',
-            'type'=>'required',
-            'depart'=>'required',
-            'number'=>'required',
-            'price'=>'required'
-        ]);
+    function store(ValidationRequest $request){
+        // $request->validate([
+        //     'name'=>'required',
+        //     'image'=>'required',
+        //     'schedule'=>'required',
+        //     'type'=>'required',
+        //     'depart'=>'required',
+        //     'number'=>'required',
+        //     'price'=>'required'
+        // ]);
         $name = $request->input('name');
         $image= $request->file('image')->store('public');
         $schedule = $request->input('schedule');

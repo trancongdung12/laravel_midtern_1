@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>Home</title>
 </head>
 <body>
@@ -58,9 +59,9 @@
                 </div>
                 <div class="bottom-title">
 
-                    Lịch trình: {{$item->shedule}}<br>
-                    Khởi hành: {{$item->depart}}<br>
-                    Số chỗ còn nhận: {{$item->number}}<br>
+                    <i class="far fa-clock"></i> Lịch trình: {{$item->shedule}}<br>
+                    <i class="fas fa-calendar-plus"></i> Khởi hành: {{$item->depart}}<br>
+                    <i class="far fa-user"></i> Số chỗ còn nhận: {{$item->number}}<br>
                     <p class="price">{{number_format($item->price)}} đ</p>
                 </div>
             </div>
